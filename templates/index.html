@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+          href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B800" />
+    <title>Bus Tracker</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
+         style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf4] px-10 py-3">
+                <div class="flex items-center gap-4 text-[#0d141c]">
+                    <div class="size-4">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6_319)">
+                                <path
+                                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                                    fill="currentColor"
+                                ></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6_319"><rect width="48" height="48" fill="white"></rect></clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em]">Bus Tracker</h2>
+                </div>
+                <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                    <span class="truncate">Sign in</span>
+                </button>
+            </header>
+            <div class="px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="@container">
+                        <div class="@[480px]:p-4">
+                            <div
+                                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+                                style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/sdxl10/4d64a347-bf7c-476b-875e-19e5436e9cd7.png");'
+                            >
+                                <div class="flex flex-col gap-2 text-left">
+                                    <h1
+                                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                                    >
+                                        Where is the bus?
+                                    </h1>
+                                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                        Track your bus in real time. No app needed
+                                    </h2>
+                                </div>
+                                <button id="trackBusBtn"
+                                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#2589f4] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                                    <span class="truncate">Track a bus</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="@container">
+                        <div class="@[480px]:p-4">
+                            <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+                                 style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/sdxl10/6bbe2f3e-adf4-4ca1-b145-116f2c765080.png");'>
+                                <div class="flex flex-col gap-2 text-left">
+                                    <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                        Join the network
+                                    </h1>
+                                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                        Help others track your bus. Share your location and route in real time
+                                    </h2>
+                                </div>
+                                <button id="shareLocationBtn"
+                                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#2589f4] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                                    <span class="truncate">Share your location</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+                        <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                            <a class="text-[#49719c] text-base font-normal leading-normal min-w-40" href="#">About</a>
+                            <a class="text-[#49719c] text-base font-normal leading-normal min-w-40" href="#">Feedback</a>
+                            <a class="text-[#49719c] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+                            <a class="text-[#49719c] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+                            <a class="text-[#49719c] text-base font-normal leading-normal min-w-40" href="#">Help</a>
+                            <a class="text-[#49719c] text-base font-normal leading-normal min-w-40" href="#">Contact</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    document.getElementById("trackBusBtn").onclick = function () {
+        window.location.href = "/passenger";
+    };
+    document.getElementById("shareLocationBtn").onclick = function () {
+        window.location.href = "/driver";
+    };
+</script>
+</body>
+</html>
